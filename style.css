@@ -1,0 +1,71 @@
+/* Reset de márgenes, rellenos y modelo de caja a cero para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el contenedor principal de la página */
+#main-container {
+    width: 100%;
+    background: linear-gradient(#051f30, #000000); /* Fondo con degradado lineal */
+}
+
+/* Estilo para el menú deslizante */
+.menu {
+    height: 100%;
+    transition: .3s; /* Transición suave para el menú */
+    background: #ffffff12; /* Fondo del menú con opacidad */
+    padding: 20px 20px 20px 0; /* Relleno del menú */
+    width: 85px; /* Ancho inicial del menú */
+    box-shadow: 8px 0px 9px 0px #00000014; /* Sombra a la derecha del menú */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    min-height: 100vh; /* Altura mínima del menú que ocupa toda la altura de la vista */
+}
+
+/* Efecto de expansión del menú al pasar el mouse sobre él */
+.menu:hover {
+    width: 260px;
+}
+
+/* Mostrar texto al pasar el mouse sobre un elemento de menú */
+.menu:hover li span:nth-child(2) {
+    display: block;
+}
+
+/* Estilo para cada elemento de la lista del menú */
+.menu-content li {
+    list-style: none; /* Elimina los marcadores de lista */
+    border-radius: 0px 50px 50px 0; /* Bordes redondeados en el lado derecho */
+    transition: .3s; /* Transición suave para los elementos de la lista */
+    margin-bottom: 20px; /* Margen inferior entre elementos de la lista */
+    padding-left: 20px; /* Relleno a la izquierda de cada elemento de la lista */
+}
+
+/* Cambio de estilo al pasar el mouse sobre un elemento de la lista */
+.menu-content li:hover {
+    background: #0c0c0c; /* Fondo oscuro al pasar el mouse */
+}
+
+/* Ocultar el segundo span (texto) de cada elemento de la lista por defecto */
+.menu-content li span:nth-child(2) {
+    display: none;
+}
+
+/* Estilo para los enlaces */
+a {
+    text-decoration: none; /* Sin subrayado de enlaces */
+    color: rgb(213, 213, 213); /* Color del texto de enlaces */
+    display: flex; /* Alineación de elementos en fila */
+    align-items: center; /* Centrado verticalmente */
+    font-family: 'calibri'; /* Fuente del texto */
+}
+
+/* Estilo para los íconos utilizando la clase "material-symbols-outlined" */
+.material-symbols-outlined {
+    font-size: 25px; /* Tamaño del ícono */
+    margin-right: 10px; /* Margen a la derecha del ícono */
+    background: #0c0c0c; /* Fondo oscuro del ícono */
+    border-radius: 50%; /* Bordes redondeados para el ícono circular */
+    padding: 10px; /* Relleno del ícono */
+}
